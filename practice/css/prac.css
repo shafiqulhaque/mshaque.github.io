@@ -9,7 +9,27 @@ body {
     text-justify: auto;
 }
 
-#cont33 {
+#cont33,
+#cont34 {
     text-align: justify;
     font-size: large;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        float: left;
+        width: 25%;
+    }
+
+    section {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 599px) {
+    nav li {
+        display: inline;
+    }
+
+
 }

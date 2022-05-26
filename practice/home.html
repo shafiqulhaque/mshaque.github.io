@@ -5,58 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./css/prac.css"> -->
-    <title>CSS</title>
-    <style>
+    <title>Nav Like Paypal</title>
+
+    <!-- <style>
         img {
-            float: right;
-            width: 40%;
-            margin: 15px;
-            height: 250px;
-            text-align: justify;
+            width: 30px;
+            height: 30px;
         }
 
-        body {
-            text-justify: auto;
-            overflow: scroll;
+        ul.nav {
+            list-style: none;
+            width: 70%;
         }
 
-        #cont33 {
-            text-align: justify;
-            font-size: large;
-        }
-
-        #cont34 {
-            text-align: justify;
-            font-size: large;
-        }
-
-        #img51 {
+        ul.nav li {
             float: left;
-            text-align: center;
-            display: block;
+            margin: 1px 20px;
         }
-    </style>
+
+        ul.nav li a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-top: 15px;
+        }
+
+        li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul.btns {
+            list-style: none;
+            float: right;
+        }
+
+        ul.btns li {
+            float: left;
+            margin: 5px;
+        }
+
+        ul.btns li a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #fff;
+            border: 1px solid rgb(30, 38, 145);
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        button.signup {
+            background-color: rgb(30, 38, 145);
+            color: #fff;
+        }
+    </style> -->
+    <script>
+
+        function swapText() {
+            var span = document.getElementById("output");
+            var textBox = document.getElementById("textbox");
+            var temp = span.innerHTML;
+            span.innerHTML = textBox.value;
+            textBox.value = temp;
+
+
+            var span2 = document.getElementById("output2");
+            var textBox2 = document.getElementById("textbox2");
+            var temp2 = span2.innerHTML;
+            span2.innerHTML = textBox2.value;
+            textBox2.value = temp2;
+        }
+
+
+
+    </script>
 </head>
 
 <body>
-    <img src="original.jpg" alt="pic">
-    <div id="cont33">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea alias non quod ex praesentium, sapiente
-        necessitatibus quibusdam unde ab deleniti aut aliquam et fugit esse laudantium porro laboriosam, quasi totam!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil aspernatur, perferendis, aperiam
-        sapiente ipsam non, placeat autem iste rerum quod blanditiis sequi excepturi optio culpa consequuntur nemo
+    <!-- <header>
+        <nav>
+            <ul class="nav">
+                <li><a href=""><img src="./paypal.jpg" alt="paypal"></a></li>
+                <li><a href="">Personal</a></li>
+                <li><a href="">Business</a></li>
+                <li><a href="">Developer</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+            <ul class="btns">
+                <li><a href=""><button class="login">Log In</button></a></li>
+                <li><a href=""><button class="signup">Sign Up</button></a></li>
+            </ul>
+        </nav>
+    </header> -->
 
-    </div>
+    <button onclick="swapText();">Click me!</button>
+    <br>
+    <br>
+    <span id="output">Hello</span>
+    <input id="textbox" type="text" value="Goodbye" />
 
-    <img id="img51" src="original.jpg" alt="pic">
-    <div id="cont34">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea alias non quod ex praesentium, sapiente
-        necessitatibus quibusdam unde ab deleniti aut aliquam et fugit esse laudantium porro laboriosam, quasi totam!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nihil aspernatur, perferendis, aperiam
-        sapiente ipsam non, placeat autem iste rerum quod blanditiis sequi excepturi optio culpa consequuntur nemo
-        repellendus
-    </div>
+    <br><br>
+
+    <span id="output2">Hi</span>
+    <input id="textbox2" type="text" value="Go Away" />
+
+
 </body>
 
 </html>

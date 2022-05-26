@@ -1,9 +1,61 @@
-h2 {
-    color: aqua;
+body {
+    background: #3c3c3c;
+    color: aliceblue;
 }
 
-body {
-    background-color: #222;
-    color: white;
-    font-family: Tahoma;
+h1 {
+    font-size: 36pt;
+    color: rgb(85, 226, 67);
+}
+
+p {
+    color: aliceblue;
+}
+
+
+
+p span {
+    color: yellow;
+}
+
+h2 {
+    color: rgb(85, 226, 67);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+a {
+    color: red;
+}
+
+span {
+    font-style: italic;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p::first-letter {
+    font-size: 20px;
+}
+
+dl {
+    margin-top: 5px;
+}
+
+dt {
+    color: yellow;
+}
+
+img.val_image {
+    height: 30px;
+    width: 50px;
 }
