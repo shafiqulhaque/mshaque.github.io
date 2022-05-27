@@ -1,0 +1,16 @@
+#content {
+    display: flex;
+    /* gap: 50px; */
+    justify-content: space-between;
+}
+
+#foot {
+    /* flex: auto; */
+    background-color: rgb(47, 42, 42);
+}
+
+#left,
+#centre,
+#right {
+    display: flex;
+}

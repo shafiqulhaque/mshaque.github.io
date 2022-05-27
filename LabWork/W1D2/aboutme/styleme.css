@@ -55,7 +55,7 @@ dt {
     color: yellow;
 }
 
-img.val_image {
-    height: 30px;
-    width: 50px;
+.val_image img {
+    height: 40px;
+    width: 60px;
 }
