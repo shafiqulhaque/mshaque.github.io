@@ -5,38 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Part</title>
-    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Design Footer using Flex</title>
+    <script src="https://kit.fontawesome.com/25bdddf30c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="foot">
-        <div id="content">
-            <div id="left">
-                <h4>About Us</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sed. Quas quae dolorem, et minima
-                eligendi laudantium reprehenderit facilis sequi quasi eos animi aliquid, assumenda officiis natus dicta,
-                repellat accusantium?
+    <div class="container">
+
+        <footer>
+            <div class="flex-container space-evenly">
+                <div class="flex-item">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque dolore corrupti tempore dolor
+                        quo voluptatem iure ea, possimus blanditiis est! Animi optio quaerat et recusandae fuga nesciunt
+                        quisquam commodi magnam!</p>
+                    <ul class="quick-contact">
+                        <li><i class="fa fa-phone icon-custom"></i> <a href="tel:+1 641 233 2384"> +1 641 233 2384</a>
+                        </li>
+                        <li><i class="fa-solid fa-envelope icon-custom"></i> <a href="mailto:mhaque@miu.edu">
+                                mhaque@miu.edu</a></li>
+                        <li>
+                            <form action="" method="post">
+                                <input type="text" placeholder="Enetr your e-mail" />
+                                <button>Send</button>
+                            </form>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="flex-item">
+                    <h2>Latest Tweets</h2>
+                    <ul class="tweets">
+                        <li><i class="fa fa-twitter icon-custom"></i> Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit.</li>
+                        <li><i class="fa fa-twitter icon-custom"></i> Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit.</li>
+                        <li><i class="fa fa-twitter icon-custom"></i> Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit.</li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <h2>Instagram</h2>
+                    <img src="./img/pic3.jpg" alt="placeholder" height="110" width="120" />
+                    <img src="./img/pic1.jpg" alt="placeholder" height="110" width="120" />
+                    <img src="./img/pic2.jpg" alt="placeholder" height="110" width="120" />
+                    <img src="./img/pic4.jpg" alt="placeholder" height="110" width="120" />
+                </div>
             </div>
-            <div id="centre">
-                <h4>Latest
-                    Tweet</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, delectus asperiores rerum libero
-                veritatis corporis ducimus, in adipisci eaque praesentium iure nesciunt tempora numquam cupiditate natus
-                repellendus quisquam iusto aliquam?
-            </div>
-            <div id="right">
-                <h4>Instragram</h4>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, ad eaque ratione excepturi quibusdam
-                dolores nisi deserunt pariatur veniam repudiandae repellendus. Quaerat deleniti eum consequatur non,
-                totam nesciunt ad officia.
+            <div class="flex-container space-evenly navsection">
+                <div class="flex-item flex-start">
+                    <nav>
+                        <ul class="links space-between">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Our works</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex-item flex-end comp">
+                    <a href="#">Colorlib</a>
+                </div>
             </div>
 
-        </div>
-        <div id="bottom">
-
-        </div>
+        </footer>
     </div>
+
 </body>
 
 </html>

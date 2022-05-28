@@ -1,0 +1,148 @@
+body {
+    background-image: url(img/background.png);
+    padding: 0%;
+    margin: 0%;
+}
+
+p {
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#banner {
+    background-image: url(img/bannerbg.png);
+    text-align: center;
+    height: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px 0px #999999;
+}
+
+#main {
+    /* center the block elemant */
+    /* max width: if we extend the max width will be 800 */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 76%;
+
+    border: 4px solid gray;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+#rotten-33 {
+    background-image: url(img/rbg.png);
+    height: 83px;
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+
+#rotten-33 img {
+    border-top-left-radius: 20px;
+}
+
+#main-right,
+#main-left {
+    height: 1500px;
+}
+
+#main-left {
+    width: 550px;
+    /* width: 60%; */
+}
+
+#main-right {
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #a2b964;
+    /* margin: 10pt; */
+
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+    /* padding-left: 8pt; */
+}
+
+#critic {
+    position: relative;
+}
+
+#critic-left,
+#critic-right {
+    width: 47%;
+    padding: 2%;
+}
+
+#critic-left {}
+
+#critic-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.review-border {
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #e8dc9b;
+    padding: 8px;
+}
+
+q {
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+#critic img {
+    padding-right: 5px;
+    /* text wrap */
+    float: left;
+}
+
+span {
+    font-style: italic;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dl {
+    line-height: 10pt;
+    padding: 10pt;
+}
+
+ul {
+    /* remove indentation */
+    list-style: none;
+    padding-left: 0%;
+}
+
+#main-footer {
+    width: 100%;
+    background-color: #a2b964;
+    padding: 5px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#validation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#tmnt-page {
+    position: relative;
+}

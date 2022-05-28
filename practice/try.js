@@ -3,12 +3,12 @@
 // var z = x + y;
 // console.log(z);
 
-var obj = {
-    x: 10,
-    y: 20,
-    nested: { x: 1 },
-    a: "String"
-}
+// var obj = {
+//     x: 10,
+//     y: 20,
+//     nested: { x: 1 },
+//     a: "String"
+// }
 
 // console.log(obj.nested.x);
 
@@ -90,28 +90,44 @@ var obj = {
 // caller2(b);
 
 
-function color() {
-    let list = ['Apple', 'Banana', 'Jackfruit'];
+// function color() {
+//     let list = ['Apple', 'Banana', 'Jackfruit'];
 
-    for (var i = 0; i < list.length; i++) {
-        console.log(list[i].length);
-    }
-    // console.log(chars.length);
-}
+//     for (var i = 0; i < list.length; i++) {
+//         console.log(list[i].length);
+//     }
+//     // console.log(chars.length);
+// }
 
-//console.log(color());
+// //console.log(color());
 
-function color2() {
-    let list = ['Apple', 'Banana', 'Jackfruit'];
-    let newArr = [];
+// function color2() {
+//     let list = ['Apple', 'Banana', 'Jackfruit'];
+//     let newArr = [];
 
-    for (var i = 0; i < list.length; i++) {
-        if (list[i].length >= 5) {
-            newArr.push(list[i])
-        }
-        return newArr[i];
-    }
-}
+//     for (var i = 0; i < list.length; i++) {
+//         if (list[i].length >= 5) {
+//             newArr.push(list[i])
+//         }
+//         return newArr[i];
+//     }
+// }
 
-console.log(color2());
+// console.log(color2());
 
+
+let arr = [4, 5, 9];
+
+let resAdd = arr.reduce(function (prev, element, index, array) {
+    console.log(prev, index, element)
+    return prev + element;
+}, 0);
+
+console.log(resAdd, arr);
+
+let resMul = arr.reduce(function (prev, element, index, array) {
+    console.log(prev, index, element)
+    return prev * element;
+}, 1);
+
+console.log(resMul, arr);
