@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0147)https://sakai.cs.miu.edu/access/content/attachment/68817757-5311-4cb3-823f-1b9997af0294/Assignments/d906819e-e5ca-4874-98b1-b4130236cd8b/ascii.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>ASCIImation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./ascii.css" type="text/css" rel="stylesheet">
+    <script src="./animations.js" type="text/javascript"></script>
+    <!-- <script src="./ASCIImation_files/ascii.js.download" type="text/javascript"></script> -->
+</head>
+
+<body>
+    <header>CSE 190 M ASCII Animation Viewer</header>
+
+
+    <h3 style="color:red;">Working on it</h3>
+    <div class="container">
+        <textarea id="text-area" cols="80" rows="20"></textarea>
+        <fieldset>
+            <legend>Play Controls:</legend>
+            <button id="start">Start</button>
+            <button disabled="disabled" id="stop">Stop</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Animation:</legend>
+            <select id="animation">
+                <option selected="selected" value="Blank">Blank</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Juggler">Juggler</option>
+                <option value="Bike">Bike</option>
+                <option value="Dive">Dive</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size:</legend>
+            <select id="fontsize">
+                <option value="Tiny">Tiny</option>
+                <option value="Small">Small</option>
+                <option value="Medium" selected="selected">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Extra Large">Extra Large</option>
+                <option value="XXL">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed:</legend>
+            <label><input id="turbo" type="checkbox">Turbo</label>
+        </fieldset>
+    </div>
+    <div id="validate">
+        <a href="https://validator.w3.org/nu/?doc=[your_url_here]">
+            <img src="./ASCIImation_files/w3c-html.png" alt="html validator">
+        </a><br>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=[your_url_here]">
+            <img src="./ASCIImation_files/w3c-css.png" alt="Valid CSS!"></a><br>
+
+        <a href="http://mumstudents.org/jshint/check.php?uri=[your_url_here]">
+            <img src="./ASCIImation_files/jslint.png" alt="JavaScript Lint">
+        </a>
+
+
+    </div>
+
+
+
+    <div style="display:none;"><video id="localVideo"></video><video id="localVideo1"></video></div>
+    <section class="widget-box" id="featured-media-widget" style="display: none; right: 20px; left: unset;">
+        <div id="proctortrack-widget-maximized" class="hide-elm-class" style="display: block;">
+            <div id="top-bar">
+                <button class="btn-min-max" id="widget-minimize" style="display: block;">
+                    <img src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/minimize.png"
+                        class="btn-minimize">
+                </button>
+
+                <button class="btn-min-max" id="widget-maximize" style="display:none">
+                    <img src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/maximize.png">
+                </button>
+                <button id="move-left" class="move-widget-btn" style="display: block;">
+                    <img style="width:18px;" src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/left.png">
+                </button>
+                <button id="move-right" style="display:none" class="move-widget-btn">
+                    <img style="width:18px;" src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/right.png">
+                </button>
+                <span id="access_code_elm" class="title-access-code" style="display:none;">Exam Password:
+                    undefined</span>
+                <img id="pt-logo"
+                    src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/proctortrack-logo-white.png"
+                    style="float:right;">
+            </div>
+
+            <div class="action-bar">
+                <button class="action-end" id="stop-proctoring">
+                    <span style="width: 10px; height: 10px; position: absolute; background: #2EE6FF;border-radius: inherit;
+                                    left: 25px;top: 44px;" id="end-dot"></span>
+                    &nbsp;&nbsp;End
+                </button>
+
+                <button class="action-web-feed" id="show-self-feed">
+                    <img src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/webcam-blue.png"
+                        id="webcam-active" class="action-img">
+                </button>
+            </div>
+            <div id="self-feed-box" style="display:block;">
+                <video id="self-feed-video" width="320" muted="true"></video>
+            </div>
+        </div>
+        <div id="proctortrack-widget-minimized" class="show-elm-class" title="Click To Maximise" data-placement="top"
+            style="display: none;">
+            <button class="btn-min-max floating-min-widget-btn" id="pt-floating-widget-maximize"
+                title="Click To Maximise" data-placement="top" style="right: 10px;">
+                <img src="chrome-extension://fohjcjopbiojmakgjmgdjpnjcpgnpelo/assets/maximize.png">
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>
