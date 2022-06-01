@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        // create element - p, div,h1,img, a, pre, label, h1 styling, table then update
+        // update elemenet  - attributes as well innerhtml
+        // remove element
+        // replace element
+
+        $(function () {
+
+            // replacing
+            let p = document.createElement("p");
+            p.setAttribute("myID", "");
+            p.innerHTML = "Hello Testing Replacing Div with P";
+            document.getElementById("myID").replaceWith(p);
+
+
+            // creating element
+            let elem1 = document.createElement("div");
+            elem1.innerHTML = "First DIV creation";
+            $("#practice").append(elem1);
+
+            let elemh1 = document.createElement("h1");
+            elemh1.innerHTML = "First H1 Creation";
+            $("#practice").append(elemh1);
+
+            let elemh4 = document.createElement("h4");
+            elemh4.innerHTML = "First H4 Creation";
+            $("#practice").append(elemh4);
+
+            let elemimg = document.createElement("img");
+            elemimg.setAttribute("src", "../LabWork/W1D1/img/shafi.jpg");
+            elemimg.setAttribute("height", "50px");
+            elemimg.setAttribute("width", "50px");
+            $("#practice").append(elemimg);
+
+            let elemdv5 = document.createElement("div");
+            $("#practice").append(elemdv5);
+
+            let elema = document.createElement("a");
+            elema.innerHTML = "Click Me(a tag)";
+            elema.setAttribute("href", "http://www.google.com");
+            elema.setAttribute("target", "_blank");
+            $("#practice").append(elema);
+
+            let elemp = document.createElement("p");
+            elemp.innerHTML = "First Paragraph creation";
+            $("#practice").append(elemp);
+
+            let elemtab = document.createElement("table");
+            elemtab.innerHTML = "<tr><th>A</th><th>B</th></tr><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr>";
+            elemtab.style.border = "1px solid red";
+            // elemtab.setAttribute("tr", "1px solid red");
+            // elemtab.setAttribute("th", "1px solid red");
+            // elemtab.setAttribute("td", "1px solid red");
+            $("#practice").append(elemtab);
+
+            let elemul = document.createElement("ul");
+            elemul.innerHTML = "<li>A</li><li>B</li><li>C</li>";
+            $("#practice").append(elemul);
+
+            let elemol = document.createElement("ol");
+            elemol.innerHTML = "<li>A</li><li>B</li><li>C</li>";
+            $("#practice").append(elemol);
+
+            let elemtxtlbl = document.createElement("label");
+            elemtxtlbl.innerHTML = "FirstName:";
+            $("#practice").append(elemtxtlbl);
+
+            let elemtext = document.createElement("input");
+            elemtext.setAttribute("type", "text");
+            elemtext.setAttribute("id", "firstname");
+            $("#practice").append(elemtext);
+
+            let elemdv2 = document.createElement("div");
+            $("#practice").append(elemdv2);
+
+            let elemradlbl = document.createElement("label");
+            elemradlbl.innerHTML = "Gender:";
+            $("#practice").append(elemradlbl);
+
+            let elemradlblM = document.createElement("label");
+            elemradlblM.innerHTML = "Male";
+            $("#practice").append(elemradlblM);
+
+            let elemradM = document.createElement("input");
+            elemradM.setAttribute("type", "radio");
+            elemradM.setAttribute("name", "gender");
+            elemradM.setAttribute("id", "mGender");
+            elemradM.setAttribute("value", "Male");
+            $("#practice").append(elemradM);
+
+            let elemradlblF = document.createElement("label");
+            elemradlblF.innerHTML = "Female";
+            $("#practice").append(elemradlblF);
+
+            let elemradF = document.createElement("input");
+            elemradF.setAttribute("type", "radio");
+            elemradF.setAttribute("name", "gender");
+            elemradF.setAttribute("id", "fGender");
+            elemradF.setAttribute("value", "Female");
+            $("#practice").append(elemradF);
+
+            let elemdv3 = document.createElement("div");
+            $("#practice").append(elemdv3);
+
+            // let elemlist = document.createElement("label");
+            // elemlist.innerHTML = "Course:";
+            // $("#practice").append(elemlist);
+
+            //drop down ????
+            // let elemselect = document.createElement("select");
+            // elemselect.setAttribute("name", "course");
+            // elemselect.setAttribute("id", "course");
+            // $("#practice").append(elemelemselectopt);
+
+            // let elemopt = document.createElement("option");
+            // var t = document.createTextNode("FPP");
+            // elemopt.appendChild(t);
+
+            // $("#practice").appendChild(elemopt);
+
+            //check box
+            let elemdv4 = document.createElement("div");
+            $("#practice").append(elemdv4);
+
+            let elemchk = document.createElement("label");
+            elemchk.innerHTML = "Gadget:";
+            $("#practice").append(elemchk);
+
+            let elemchk1 = document.createElement("input");
+            elemchk1.setAttribute("type", "checkbox");
+            elemchk1.setAttribute("name", "device");
+            elemchk1.setAttribute("value", "Phone");
+            $("#practice").append(elemchk1);
+
+            let elemchkphn = document.createElement("label");
+            elemchkphn.innerHTML = "Phone";
+            $("#practice").append(elemchkphn);
+
+            let elemchk2 = document.createElement("input");
+            elemchk2.setAttribute("type", "checkbox");
+            elemchk2.setAttribute("name", "device");
+            elemchk2.setAttribute("value", "Laptop");
+            $("#practice").append(elemchk2);
+
+            let elemchklp = document.createElement("label");
+            elemchklp.innerHTML = "Laptop";
+            $("#practice").append(elemchklp);
+
+            let elemchk3 = document.createElement("input");
+            elemchk3.setAttribute("type", "checkbox");
+            elemchk3.setAttribute("name", "device");
+            elemchk3.setAttribute("value", "Tab");
+            $("#practice").append(elemchk3);
+
+            let elemchktb = document.createElement("label");
+            elemchktb.innerHTML = "Tab";
+            $("#practice").append(elemchktb);
+
+            let elemdv6 = document.createElement("div");
+            $("#practice").append(elemdv6);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="myID">
+        Text Here will be replaced
+    </div>
+
+    <div id="practice">
+
+        <!-- <div>
+            <label for="course">Course: </label>
+            <select name="course" id="course" required>
+                <option>select</option>
+                <option>FPP</option>
+                <option>MPP</option>
+            </select>
+        </div> -->
+
+        <!-- <div>
+            <label for="gadgets">Gadgets: </label>
+            <span id="selectedGadgets">
+                <input type="checkbox" name="device" value="Phone"> <label for="phone">Phone</label>
+                <input type="checkbox" name="device" value="Laptop"> <label for="laptop">Laptop</label>
+                <input type="checkbox" name="device" value="Tablet"> <label for="tablet">Tablet</label>
+            </span>
+        </div> -->
+
+
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

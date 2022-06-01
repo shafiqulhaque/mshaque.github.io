@@ -116,18 +116,18 @@
 // console.log(color2());
 
 
-let arr = [4, 5, 9];
+// let arr = [4, 5, 9];
 
-let resAdd = arr.reduce(function (prev, element, index, array) {
-    console.log(prev, index, element)
-    return prev + element;
-}, 0);
+// let resAdd = arr.reduce(function (prev, element, index, array) {
+//     console.log(prev, index, element)
+//     return prev + element;
+// }, 0);
 
-console.log(resAdd, arr);
+// console.log(resAdd, arr);
 
-let resMul = arr.reduce(function (prev, element, index, array) {
-    console.log(prev, index, element)
-    return prev * element;
-}, 1);
+// let resMul = arr.reduce(function (prev, element, index, array) {
+//     console.log(prev, index, element)
+//     return prev * element;
+// }, 1);
 
-console.log(resMul, arr);
+// console.log(resMul, arr);

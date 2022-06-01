@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        // create element - div, p, img, a , table then update
+        // update elemenet  - attributes as well innerhtml
+        // remove element
+        // replace element
+
+
+        $(function () {
+            let p = document.createElement("p");
+            p.setAttribute("id", "");
+            p.innerHTML = "Hello";
+            document.getElementById("id").replaceWith(p);
+        })
+
+        function clicked() {
+            let valuep = $('#inputID').val();
+            let label = document.createElement('label');
+            label.innerHTML = valuep;
+            document.getElementById("inputID").replaceWith(label);
+        }
+
+        $(function () {
+            console.log($('#inputID'));
+            $("#button1").click(function () {
+                console.log("Here")
+            });
+
+            //update id and name
+            //document.getElementById("myDIV").setAttribute("name", "SomeName");
+            //document.getElementById("myDIV").setAttribute("id", "SomeId");
+            //$("#myDIV").name = "someName";
+
+            //update inner DIV
+            //console.log(document.getElementById("myDIV"));
+            //document.getElementById("myDIV").innerHTML = "test";
+
+            //update input value
+            // document.getElementById("inputId").setAttribute("value", "abc");
+
+            //update button value
+            // document.getElementById("button1").setAttribute("value", "Submit");
+
+            //update Paragraph content
+            // document.getElementById("myPara").innerHTML = "New ParaGraph";
+
+            //remove and update html
+            // $("#inputID").remove();
+
+            //not complete- radio change with another radio
+            // let inputRadio = document.createElement("input");
+            // inputRadio.setAttribute("type", "radio");
+            // $("#inputID").replaceWith(inputRadio);
+
+
+            //update and replace first text with radio
+            // let inputRadireplace = document.createElement("input");
+            // inputRadireplace.setAttribute("type", "radio");
+            // $("#inputID").replaceWith(inputRadireplace);
+
+        });
+
+//sakai file to practice
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div id="id">Trying Here</div>
+
+    Input <input type="text" id="inputID" />
+    <br>
+
+
+    <input type="button" onclick="clicked()" value="Button">
+    <input type="button" id="button1" value="Button">
+    <div id="myRadFtr">My Radio Button <input type="radio"></div>
+
+    <!--
+    <input type="text" id="inputId" value="value" />
+    <input type="button" id="button1" value="MyButton" />
+    <div id="myDIV" class="myClass" name="myName">
+         //before
+    <div id="innerDiv">
+        //prepend
+        <div id="firstP"> First P</div>
+        <div id="secondP"> Second P</div>
+        //append 
+    </div>
+   // after
+    <p id="myPara">Old Pragraph</p>
+    </div>
+-->
+
+
+
+</body>
+
+</html>

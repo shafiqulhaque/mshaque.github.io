@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        sdsfsf {
+            color: pink;
+        }
+    </style>
+    <script>
+        // create element - div,h1,img, a, pre, label, h1 styling, table then update
+        $(function () {
+            let element1 = document.createElement("div");
+            element1.innerHTML = "First DIV";
+            $("#myDvsn").append(element1);
+
+            let element2 = document.createElement("h1");
+            element2.innerHTML = "First h1";
+            $("#myDvsn").append(element2);
+
+            //set img attributes
+            let element3 = document.createElement("img");
+            element3.setAttribute("src", "../paypal.jpg");
+            element3.setAttribute("height", "50px");
+            element3.setAttribute("width", "50px");
+            $("#myDvsn").append(element3);
+
+            let element4 = document.createElement("a");
+            element4.innerHTML = "First a";
+            $("#myDvsn").append(element4);
+
+            let element5 = document.createElement("pre");
+            element5.innerHTML = "First Pre";
+            $("#myDvsn").append(element5);
+
+            let element6 = document.createElement("label");
+            element6.innerHTML = "First Label";
+            $("#myDvsn").append(element6);
+
+            let element = document.createElement("h1");
+            element.innerHTML = "2nd H";
+            element.style.color = "red";
+            $("#myDvsn").append(element);
+
+            let element7 = document.createElement("table");
+            element7.innerHTML = "<tr><th>1</th><th>2</th></tr><tr><td>A</td><td>B</td></tr><tr><td>A</td><td>B</td></tr>";
+            element7.style.border = "1px solid black";
+            // element7.style.color = red;
+            $("#myDvsn").append(element7);
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="myDvsn">
+
+        <!-- <table>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+        </table> -->
+
+
+
+    </div>
+</body>
+
+</html>
