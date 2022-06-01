@@ -14,6 +14,7 @@
                 const textInput = $("#inputText");
                 const textInputLabel = document.createElement("label");
                 textInputLabel.innerHTML = textInput.val();
+                //textInputLabel.style.textAlign = "right";
                 textInput.replaceWith(textInputLabel);
 
                 const textAreaInput = $("#inputTextArea");
@@ -56,7 +57,10 @@
 </head>
 
 <body>
-    <div id="id">
+    <h1 style="color: blue">Use all the form controller and print selecteded items as Label</h1>
+    <hr />
+    <br />
+    <div id="id" style="margin: 40px; padding:30px; border: 2px solid black; width: 50%">
         <label> TextField : </label>
         <input id="inputText" type="text" />
         <br>
