@@ -23,7 +23,6 @@
             p.innerHTML = "Hello Testing Replacing Div with P";
             document.getElementById("myID").replaceWith(p);
 
-
             // creating element
             let elem1 = document.createElement("div");
             elem1.innerHTML = "First DIV creation";
@@ -117,17 +116,21 @@
             // elemlist.innerHTML = "Course:";
             // $("#practice").append(elemlist);
 
-            //drop down ????
-            // let elemselect = document.createElement("select");
-            // elemselect.setAttribute("name", "course");
-            // elemselect.setAttribute("id", "course");
-            // $("#practice").append(elemelemselectopt);
+            //drop down
+            let elemselect = document.createElement("select");
+            elemselect.setAttribute("name", "course");
+            elemselect.setAttribute("id", "course");
+            $("#practice").append(elemselect);
 
-            // let elemopt = document.createElement("option");
-            // var t = document.createTextNode("FPP");
-            // elemopt.appendChild(t);
+            let elemopt = document.createElement("option");
+            let t = document.createTextNode("FPP");
+            elemopt.append(t);
+            elemselect.append(elemopt);
 
-            // $("#practice").appendChild(elemopt);
+            let elemopt2 = document.createElement("option");
+            let t1 = document.createTextNode("MPP");
+            elemopt2.append(t1);
+            elemselect.append(elemopt2);
 
             //check box
             let elemdv4 = document.createElement("div");

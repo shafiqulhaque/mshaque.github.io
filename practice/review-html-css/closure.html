@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+    function wrapper(colorName) {
+        return function show() {
+            this.style.color = colorName;
+        }
+    }
+
+    $(function () {
+        $('#btn1').click(wrapper("red"));
+        $('#btn2').click(wrapper("yellow"));
+        $("#inputField").click(wrapper("green"));
+
+    })
+
+
+</script>
+
+<body>
+
+    <button id="btn1">Test</button>
+    <button id="btn2">TOggle</button>
+    <input type="text" id="inputField" />
+</body>
+
+</html>

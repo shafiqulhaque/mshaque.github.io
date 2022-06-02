@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script>
+        $(function () {
+            // $('#btn1').click(wrapper("red"));
+            // $('#btn2').click(wrapper("yellow"));
+            // $("#btn2").click(toggle());
+            // $("#inputField").click(wrapper("green"));
+            // setInterval(fn,2000)
+
+            let objArray = [{ name: "a", age: 70 }, { name: "b", age: 30 }, { name: "c", age: 40 }];
+            let myTable = createTable(objArray);
+
+            document.body.append(myTable);
+
+        })
+
+        //Function Modify Table(o)
+
+        function createTable(objArray) {
+            let tableElement = document.createElement("table");
+            let rows = "";
+            let headers = "<tr>";
+            //Create headers
+            for (let key in objArray[0]) {
+                headers += "<th>" + key + "</th>";
+            }
+            headers += "</tr>";
+            console.log(headers)
+            for (let element of objArray) {
+                rows += "<tr>";
+                for (let key in element) {
+                    rows += "<td>" + element[key] + "</td>";
+                }
+                rows += "</tr>"
+            }
+            console.log(rows)
+            tableElement.innerHTML = headers + rows;
+            return tableElement;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

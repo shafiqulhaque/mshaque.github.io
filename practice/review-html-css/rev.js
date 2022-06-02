@@ -48,11 +48,16 @@ console.log(sum);
 
 //********* */
 
-const pt = {
-    x: 4,
-    y: 3,
-    distanceFromOrigin: function () {
-        return Math.sqrt(this.x * this.x + this.y * this.y);
-    }
-};
-console.log((pt.distanceFromOrigin())); 
+// const pt = {
+//     x: 4,
+//     y: 3,
+//     distanceFromOrigin: function () {
+//         return Math.sqrt(this.x * this.x + this.y * this.y);
+//     }
+// };
+// console.log((pt.distanceFromOrigin()));
+
+
+//************************** 
+
+
