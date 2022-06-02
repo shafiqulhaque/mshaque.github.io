@@ -12,10 +12,14 @@ p {
     color: aliceblue;
 }
 
+b {
+    color: yellow;
+}
 
 
 p span {
     color: yellow;
+    font-weight: bold;
 }
 
 h2 {
@@ -29,10 +33,6 @@ img {
 
 a {
     color: red;
-}
-
-span {
-    font-style: italic;
 }
 
 a:link {
