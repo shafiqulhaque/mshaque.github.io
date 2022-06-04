@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script>
+
+        $(function () {
+
+            let objArray = [{ name: "apple", code: "ap" }, { name: "banana", code: "bn" }];
+
+            let selectelement = document.createElement("select");
+
+            for (i = 0; i < objArray.length; i++) {
+
+                let optelement = document.createElement("option");
+                optelement.setAttribute("value", objArray[i].code);
+                optelement.innerHTML = objArray[i].name;
+
+                selectelement.append(optelement);
+            }
+
+            document.body.append(selectelement);
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- <div id="first">
+        <div id="second">
+        </div>
+    </div> -->
+    <!-- <select name="dropdown" id="dd">
+        <option value="Apple"> ap </option>
+        <option value="Banana"> Bn </option>
+        <option value="Orange"> Or </option>
+    </select> -->
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- $(function () {
+    let objArray = [{ name: "apple", code: "ap" }, { name: "banana", code: "bn" }, { name: "pear", code: "pr" }];
+
+    let selectelement = document.createElement("select");
+
+    for (let i = 0; i < objArray.length; i++) {
+        let optelement = document.createElement("option");
+        optelement.setAttribute("value", objArray[i].code);
+        optelement.innerHTML = objArray[i].name;
+        selectelement.append(optelement);
+    }
+
+    document.body.append(selectelement);
+}) -->

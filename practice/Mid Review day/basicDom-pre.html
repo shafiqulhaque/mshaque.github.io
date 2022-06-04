@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            // selectors
+            let mydiv = document.getElementById("mydiv");// using DOM
+            //console.log(mydiv.innerHTML);
+
+            // Reading  : select by ID
+            let x = $("#mydiv").html(); // jQuery style
+            console.log("by id", x);
+
+            let y = $(".mydiv").html(); // jQuery style
+            console.log("by class", y);
+
+            let z = $("[name='abc']").html();
+            console.log("by name", z);
+
+            // Creating : select by ID
+            $("#mydiv").after("<div>Younger brother</div>");
+            $("#mydiv").before("<div>Elder brother</div>");
+            $("#mydiv").append("<p>inside div as child</p>");
+            $("#mydiv").append("<p>inside div as child2</p>");
+            $("#mydiv").prepend("<p>inside div as child1</p>");
+            $("#mydiv").prepend("<p>inside div as child0</p>");
+
+            //Modify attributes : select by ID
+            $("#mydiv").attr("id", "divID");
+            $("#divID").attr("class", "newclass");
+            $("#divID").attr("name", "xyz");
+
+            // modify content // replace the content : select by ID
+            $("#mydiv").html("<ul><li> item1</li><li>item2</li></ul>");
+
+            $("#mydiv").html("<table><tr><th>A</th><th>B</th><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>")
+
+            // Removing element : select by ID
+            $("#mydiv p, #mydiv b").remove()
+
+            //$("#mydiv table").remove();
+
+
+            // replacing
+            let p = document.createElement("p");
+            p.setAttribute("myID", "");
+            p.innerHTML = "Hello Testing Replacing Div with P";
+            document.getElementById("myID").replaceWith(p);
+
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="mydiv" class="mydiv" name="abc">
+        <h1>hhh</h1>
+        <b>div content</b>
+        <p>Para</p>
+
+    </div>
+
+    <!-- <div id="myID">
+        Text Here will be replaced
+    </div> -->
+
+
+
+</body>
+
+</html>

@@ -11,21 +11,14 @@
 
     <script>
         $(function () {
-            // $('#btn1').click(wrapper("red"));
-            // $('#btn2').click(wrapper("yellow"));
-            // $("#btn2").click(toggle());
-            // $("#inputField").click(wrapper("green"));
-            // setInterval(fn,2000)
-
-            let objArray = [{ name: "a", age: 70 }, { name: "b", age: 30 }, { name: "c", age: 40 }];
+            let objArray = [{ name: "a", age: 70 }, { name: "b", age: 30 },
+            { name: "c", age: 40 }];
             let myTable = createTable(objArray);
 
             document.body.append(myTable);
-
         })
 
         //Function Modify Table(o)
-
         function createTable(objArray) {
             let tableElement = document.createElement("table");
             let rows = "";

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(function clickMe() {
+
+            let pelem = document.createElement("p");
+            pelem.innerHTML = "This is DOM paragraph";
+            $("#newDiv").append(pelem);
+
+            let imgelem = document.createElement("img");
+            imgelem.setAttribute("src", "../LabWork/W1D1/img/shafi.jpg");
+            imgelem.setAttribute("alt", "shafi");
+            imgelem.setAttribute("height", "50px");
+            $("#newDiv").append(imgelem);
+
+            let blankele = document.createElement("div");
+            $("#newDiv").append(blankele);
+
+            let aelem = document.createElement("a");
+            aelem.innerHTML = "Click Me DOM";
+            aelem.setAttribute("href", "https://www.google.com");
+            aelem.setAttribute("target", "_blank");
+            $("#newDiv").append(aelem);
+
+            let blankele1 = document.createElement("div");
+            $("#newDiv").append(blankele1);
+
+            let lbelem = document.createElement("label");
+            lbelem.innerHTML = "Choice-Dom";
+            $("#newDiv").append(lbelem);
+
+            let slctelem = document.createElement("select");
+            slctelem.innerHTML = "Choice-Dom";
+            slctelem.setAttribute("name", "dropdown");
+            slctelem.setAttribute("id", "dd");
+            $("#newDiv").append(slctelem);
+
+            let optelem = document.createElement("option");
+            let t = document.createTextNode("Apple");
+            optelem.setAttribute("value", "Apple");
+            optelem.setAttribute("name", "ap");
+            optelem.append(t);
+            slctelem.append(optelem);
+
+            let optelem2 = document.createElement("option");
+            let u = document.createTextNode("Banana");
+            optelem2.setAttribute("value", "Banana");
+            optelem2.setAttribute("name", "bn");
+            optelem2.append(u);
+            slctelem.append(optelem2);
+
+            let optelem3 = document.createElement("option");
+            let v = document.createTextNode("Pitch");
+            optelem3.setAttribute("value", "Pitch");
+            optelem3.setAttribute("name", "pc");
+            optelem3.append(v);
+            slctelem.append(optelem3);
+
+            let blankele2 = document.createElement("div");
+            $("#newDiv").append(blankele2);
+
+            let lbelem2 = document.createElement("label");
+            lbelem2.innerHTML = "Name";
+            $("#newDiv").append(lbelem2);
+
+            let textelem = document.createElement("input");
+            //textelem.innerHTML = "Choice-Dom";
+            textelem.setAttribute("type", "text");
+            textelem.setAttribute("id", "tb");
+            $("#newDiv").append(textelem);
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="newDiv">
+
+
+    </div>
+</body>
+
+</html>

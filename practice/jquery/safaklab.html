@@ -8,11 +8,9 @@
     <title>Document</title>
     <!-- <script src="/app.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script>
         $(function () {
             function clicked() {
-
                 const textInput = $("#inputText");
                 const textInputLabel = document.createElement("label");
                 textInputLabel.innerHTML = textInput.val();
@@ -23,11 +21,13 @@
                 textAreaInputLabel.innerHTML = textAreaInput.val();
                 textAreaInput.replaceWith(textAreaInputLabel);
 
+
                 const radioInput = $('input[type="radio"]:checked');
                 const radioGroup = $("#radioGroup");
                 const radioInputLabel = document.createElement("label");
                 radioInputLabel.innerHTML = radioInput.val();
                 radioGroup.replaceWith(radioInputLabel);
+
 
                 const selectInput = $("#selectId");
                 const selectInputLabel = document.createElement("label");
@@ -42,6 +42,7 @@
                 checkboxInput.each(function (i, e) {
                     checkedArray.push(e.value);
                 });
+
                 checkboxInputLabel.innerHTML = checkedArray;
                 checkboxGroup.replaceWith(checkboxInputLabel);
             }

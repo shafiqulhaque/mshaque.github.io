@@ -10,11 +10,6 @@
 
     <script>
 
-        // create element - p, div,h1,img, a, pre, label, h1 styling, table then update
-        // update elemenet  - attributes as well innerhtml
-        // remove element
-        // replace element
-
         $(function () {
 
             // replacing
@@ -24,18 +19,16 @@
             document.getElementById("myID").replaceWith(p);
 
             // creating element
+            //div
             let elem1 = document.createElement("div");
             elem1.innerHTML = "First DIV creation";
             $("#practice").append(elem1);
 
+            //h1
             let elemh1 = document.createElement("h1");
             elemh1.innerHTML = "First H1 Creation";
             $("#practice").append(elemh1);
-
-            let elemh4 = document.createElement("h4");
-            elemh4.innerHTML = "First H4 Creation";
-            $("#practice").append(elemh4);
-
+            //img
             let elemimg = document.createElement("img");
             elemimg.setAttribute("src", "../LabWork/W1D1/img/shafi.jpg");
             elemimg.setAttribute("height", "50px");
@@ -44,25 +37,22 @@
 
             let elemdv5 = document.createElement("div");
             $("#practice").append(elemdv5);
-
+            //a
             let elema = document.createElement("a");
             elema.innerHTML = "Click Me(a tag)";
             elema.setAttribute("href", "http://www.google.com");
             elema.setAttribute("target", "_blank");
             $("#practice").append(elema);
-
+            //p
             let elemp = document.createElement("p");
             elemp.innerHTML = "First Paragraph creation";
             $("#practice").append(elemp);
-
+            //table
             let elemtab = document.createElement("table");
             elemtab.innerHTML = "<tr><th>A</th><th>B</th></tr><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr>";
             elemtab.style.border = "1px solid red";
-            // elemtab.setAttribute("tr", "1px solid red");
-            // elemtab.setAttribute("th", "1px solid red");
-            // elemtab.setAttribute("td", "1px solid red");
             $("#practice").append(elemtab);
-
+            //list
             let elemul = document.createElement("ul");
             elemul.innerHTML = "<li>A</li><li>B</li><li>C</li>";
             $("#practice").append(elemul);
@@ -70,11 +60,11 @@
             let elemol = document.createElement("ol");
             elemol.innerHTML = "<li>A</li><li>B</li><li>C</li>";
             $("#practice").append(elemol);
-
+            //label
             let elemtxtlbl = document.createElement("label");
             elemtxtlbl.innerHTML = "FirstName:";
             $("#practice").append(elemtxtlbl);
-
+            //input
             let elemtext = document.createElement("input");
             elemtext.setAttribute("type", "text");
             elemtext.setAttribute("id", "firstname");
@@ -82,7 +72,7 @@
 
             let elemdv2 = document.createElement("div");
             $("#practice").append(elemdv2);
-
+            //radio
             let elemradlbl = document.createElement("label");
             elemradlbl.innerHTML = "Gender:";
             $("#practice").append(elemradlbl);
@@ -111,10 +101,6 @@
 
             let elemdv3 = document.createElement("div");
             $("#practice").append(elemdv3);
-
-            // let elemlist = document.createElement("label");
-            // elemlist.innerHTML = "Course:";
-            // $("#practice").append(elemlist);
 
             //drop down
             let elemselect = document.createElement("select");
@@ -181,37 +167,9 @@
     <div id="myID">
         Text Here will be replaced
     </div>
-
     <div id="practice">
 
-        <!-- <div>
-            <label for="course">Course: </label>
-            <select name="course" id="course" required>
-                <option>select</option>
-                <option>FPP</option>
-                <option>MPP</option>
-            </select>
-        </div> -->
-
-        <!-- <div>
-            <label for="gadgets">Gadgets: </label>
-            <span id="selectedGadgets">
-                <input type="checkbox" name="device" value="Phone"> <label for="phone">Phone</label>
-                <input type="checkbox" name="device" value="Laptop"> <label for="laptop">Laptop</label>
-                <input type="checkbox" name="device" value="Tablet"> <label for="tablet">Tablet</label>
-            </span>
-        </div> -->
-
-
-
-
-
-
     </div>
-
-
-
-
     </div>
 </body>
 

@@ -34,12 +34,12 @@
 //     obj.inner();
 // }
 
-// sum();
+// console.log(sum());
 
 
-//***************************************8 */
+//*************find sum of C and return it************************ */
 let array = [{ a: 1, b: 2, c: 3 }, { a: 3, b: 4, c: 6 }];
-//find sum of C and return it
+
 let sum = array.reduce((prev, elem, idx, arr) => {
     return prev += elem.c;
 }, 0);

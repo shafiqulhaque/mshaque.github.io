@@ -16,7 +16,6 @@ b {
     color: yellow;
 }
 
-
 p span {
     color: yellow;
     font-weight: bold;
@@ -26,10 +25,12 @@ h2 {
     color: rgb(85, 226, 67);
 }
 
+
 img {
     width: 200px;
     height: 200px;
 }
+
 
 a {
     color: red;
@@ -53,9 +54,4 @@ dl {
 
 dt {
     color: yellow;
-}
-
-.val_image img {
-    height: 40px;
-    width: 60px;
 }

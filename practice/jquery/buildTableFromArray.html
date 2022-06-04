@@ -9,7 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <script>
-    let objArray = [{ name: "a", age: 70 }, { name: "b", age: 30 }, { name: "c", age: 40 }, { name: "d", age: 50 }];
+    let objArray = [{ name: "a", age: 70 }, { name: "b", age: 30 },
+    { name: "c", age: 40 }, { name: "d", age: 50 }];
 
     $(function () {
         let tableElement = document.createElement("table");
@@ -17,7 +18,6 @@
         document.body.append(tableElement);
         let myTable = buildTable(objArray, $(tableElement));
     })
-
     function filterArray() {
         let filteredArray = objArray.filter(function (element, index) {
             return element.age < 70;
@@ -29,9 +29,8 @@
     function buildTable(objArray, tableElement) {
         let rows = "";
         let headers = "<tr>";
-        //Create headers
         for (let key in objArray[0]) {
-            headers += "<th>" + key + "</th>";
+            headers += "<th>" + key + "</th>";    //Create headers
         }
         headers += "</tr>";
         console.log(headers)
@@ -42,7 +41,7 @@
             }
             rows += "</tr>"
         }
-        console.log(rows)
+        console.log(rows);
         tableElement.html(headers + rows);
         return tableElement;
     }
