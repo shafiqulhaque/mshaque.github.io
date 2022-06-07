@@ -1,0 +1,14 @@
+{
+  "name": "w2d4-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assignment.js",
+  "scripts": {
+    "start": "node assignment.js",
+    "dev": "nodemon assignment.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  }
+}
