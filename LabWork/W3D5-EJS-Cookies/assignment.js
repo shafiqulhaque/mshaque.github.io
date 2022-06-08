@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 3000
 
-var path = require("path")
+const cookieParse = require("cookie-parser");
+var path = require("path");
+var ejs = require("ejs");
+
+const port = 3000
 
 app.listen(port, (error) => {
     if (!error)
@@ -12,9 +15,13 @@ app.listen(port, (error) => {
 }
 );
 
-//Read the parameters from post request
+// Read the parameters from cookie parser
+app.use(cookieParse());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.set('view engine', 'html');
+app.engine('html', ejs.renderFile);
 
 let counter = 0;
 let storedData;
@@ -24,6 +31,7 @@ let view = 0;
 let er = 0;
 let st = 0;
 let nf = 0;
+
 //1. Get request -> give the form html
 app.get('/add', (req, res, next) => {
     console.log("Total hits: ", ++counter);
@@ -65,14 +73,7 @@ app.get('/view', (req, res, next) => {
         + "<div>Select Box:" + storedData.sellist + "</div>"
         + "<div>Message:" + storedData.txtArea + "</div>")
     //res.send("<label>Message:"+ storedData.txtArea+ "</label>")
-
 });
-
-// app.post("/postData", function (req, res, next) {
-//     console.log(++counter);
-//     console.log('In the post', req.body.name, req.body.skill);
-//     res.redirect("back")
-// });
 
 //6. Stats -> Hits of each page
 app.get('/pagestat', (req, res, next) => {

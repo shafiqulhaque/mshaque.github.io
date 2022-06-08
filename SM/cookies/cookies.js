@@ -16,11 +16,9 @@ app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 // app.set('views', path.join(__dirname,"myDir"));
 
-
-
 app.get("/admin", function (req, res, next) {
     console.log(" In Landing ", req.cookies)
-    console.log('Admin Landing', req.query);
+    console.log('Admin Landing', req.query); // read parameter
     res.send("<form action='/admin' method='post'><input name='myName'/><input name='cookieValue'/><input type='submit'/>")
 });
 
