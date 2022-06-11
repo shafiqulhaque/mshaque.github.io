@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        let objArray = [{ plant: "daffodil", color: "yellow" }, { plant: "zinnia", color: "purple" }, { plant: "chrysanthumum", color: "pink" }, { plant: "lily", color: "pink" }];
+
+        $(function () {
+
+            let selectElement = document.createElement("select");
+
+            for (i = 0; i < objArray.length; i++) {
+
+                let optElement = document.createElement("option");
+                optElement.setAttribute("value", objArray[i].plant + objArray[i].color);
+                optElement.style("width", "220px");
+                optElement.style("height", "200px");
+                optElement.innerHTML = objArray[i].name;
+
+                selectElement.append(selectElement);
+            }
+
+            $("#option-item").append(selectElement);
+
+            function delayColorClick() {
+                let delayColor = document.getElementById("#del-button");
+                let textBox = document.getElementById("#delay-color");
+                var temp = div.innerHTML;
+                textBox.value = temp;
+                temp.style("color", "green");
+            }
+
+            function filterItem() {
+                let filterItem = objArray.filter(function (element, index) {
+                    return
+                    if (element.text = "color:pink") {
+
+                    } else if (element.plant = "plant:Daffodil") {
+
+                    }
+                })
+
+                let selectElement = $("#moverItemIndex");
+                select.element.html("");
+                filterItemToOrderly(filterItem, selectElement);
+            }
+
+            $('#moverItem').click(filterItemToOrderly);
+            function filterItemToOrderly() {
+                objArray.sort((a, b) => {
+                    if (a.plant < b.plant) return -1;
+                    if (a.plant > b.plant) return 1;
+                    return 0;
+                });
+                moveItemRight(objArray);
+            }
+
+            function moveItemRight() {
+                let selectElement = $("#moverItemIndex");
+                let textRight = document.createElement("input");
+                textRight.setAttribute("text");
+                textRight.innerHTML = selectElement.val();
+                selectElement.append(textRight);
+
+                let optionInput = $('input[type="option"]:checked');
+                let optionGroup = $("#moverItemIndex");
+                let optionInputText = document.createElement("text");
+                optionInputText.innerHTML = optionInput.val;
+                optionGroup.replaceWith(optionInputText);
+
+                let multipleArray = [];
+                optionInput.each(function (i, e) {
+                    multipleArray.push(e.plant + e.color);
+                })
+
+                optionInputText.innerHTML = multipleArray;
+                optionGroup.replaceWith(optionInputText);
+            }
+
+            $("input[type='submit']").clicked(moveItemRight);
+        })
+    </script>
+
+    <style>
+        @media (max-width: 375px) {
+            .container {
+                text-align: center;
+            }
+        }
+
+        @media (max-height: 667px) {
+            .container {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 200px) {
+            .container {}
+        }
+
+        @media (max-height: 779px) {
+            .container {
+                shape-rendering: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container" style="">
+
+        <div id="header">
+            <div id="header-up"
+                style="color: white;font-weight: bold;background-color: rgb(0, 17, 255); display: flex; justify-content: space-between; padding: 20px;">
+                <div>Home</div>
+                <div>Mission</div>
+                <div>Career</div>
+                <div>Contact US</div>
+            </div>
+            <div id="cover" style="margin-top: 30px; text-align: center;object-fit: cover;">
+                <img src="./flowers.jpg" alt="flower" height="120px" width="120px" style="border-radius: 50%;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos natus maxime repellendus necessitatibus
+                    vero impedit sed dolor odio eos a, nesciunt aliquid saepe rem, modi tenetur consequatur quidem
+                    dicta!
+                    Obcaecati?</p>
+            </div>
+        </div>
+
+        <div id="textArea-button" style="text-align: center; margin-top: 40px;">
+            <input type="text" id="delay-color">
+            <button id="del-button">Delay Color</button>
+
+            <input type="text" id="filter-color">
+            <button id="del-button">Filter</button>
+
+            <link rel="stylesheet"
+                href="../../Class Lecture-Assignment/WAP-SM/Github/cs472/practice/Mid Review day/ConvertObjectToConcatedArray.js">
+
+
+        </div>
+        <br><br>
+        <div id="moving-item" style="display: flex; gap:50px; align-items: center;margin-left: 350px;">
+            <div id="option-item">
+                <select name="dropboxselect" id="moverItemIndex" style="width: 220px;height: 200px;" multiple>
+                    <option name="option-group" value="">Plant: Daffodil; Color: yellow</option>
+                    <option name="option-group" value="">Plant: Daffodil; Color: yellow</option>
+                    <option name="option-group" value="">Plant: Daffodil; Color: yellow</option>
+                    <option name="option-group" value="">Plant: Daffodil; Color: yellow</option>
+                </select>
+            </div>
+            <div id="moveButton" style="text-align: center;">
+                <button id="moverItem">Move</button>
+            </div>
+            <div>
+                <input type="text" style="width: 220px;height: 200px;">
+            </div>
+
+        </div>
+
+        <div id="footer" style="display: flex; gap: 100px;margin-left: 500px ;">
+            <div style="text-align: left;">
+                ****
+            </div>
+
+            <div style="text-align: center;">
+                <div>****</div>
+                <div>
+                    <img src="./flowers.jpg" alt="small-flower" height="30px" width="30px">
+                </div>
+                <div>****</div>
+
+            </div>
+            <div style="text-align: right;">
+                ****
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        $.ajax("/", {
+            "type": "GET",
+            "data": {
+                "key1": "Asaad Saad",
+                "key2": 180,
+                "key3": "abcdef"
+            },
+        }).done(function (response) {
+            console.log(response);
+        }).fail(function (response) {
+            console.log(response);
+        });
+
+    </script> -->
+</head>
+
+<body>
+    <h1>Name: <%= locals.name %>
+    </h1>
+    <h1>Age: <%= locals.age %>
+    </h1>
+
+
+    <label for="skills">Skills: </label>
+    <select name="skills" id="skllSet">
+        <% for(let value of skills){%>
+            <option>
+                <%= value.replace(/\w/, c=> c.toUpperCase() ) %>
+            </option>
+            <%} %>
+    </select>
+    <% count=0 %>
+        <% for(let value of location){%>
+            <% count++ %>
+                <ul>
+                    <li>Address : <%= count %>
+                            <ul>
+                                <li> address: <%= value.address %>
+                                </li>
+                                <li> city: <%= value.city %>
+                                </li>
+                            </ul>
+                    </li>
+
+                </ul>
+                <%} %>
+
+
+</body>
+
+
+</html>

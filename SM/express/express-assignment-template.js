@@ -12,12 +12,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/add", function (req, res, next) {
+    // res.cookie('hello', 'world', { maxAge: 1000 * 24 * 60 * 60 * 7 });
     res.sendFile(path.join(__dirname, "domAssignment.html"))
 });
 
 
 //passing data
 app.post("/add", function (req, res, next) {
+    //console.log(req.cookies.hello);
     console.log('In the post', req.body.name, req.body.skill);
     storedData = req.body;
     res.redirect("/view")
@@ -31,3 +33,5 @@ app.get("/view", function (req, res, next) {
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "../", "html", "error.html"))
 });
+
+
