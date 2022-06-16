@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Document</title>
+    <title>obj to DD</title>
 
     <script>
 
@@ -14,18 +14,18 @@
 
             let objArray = [{ name: "apple", code: "ap" }, { name: "banana", code: "bn" }];
 
-            let selectelement = document.createElement("select");
+            let selectElement = document.createElement("select");
 
-            for (i = 0; i < objArray.length; i++) {
+            for (let i = 0; i < objArray.length; i++) {
 
-                let optelement = document.createElement("option");
-                optelement.setAttribute("value", objArray[i].code);
-                optelement.innerHTML = objArray[i].name;
+                let optionElement = document.createElement("option");
+                optionElement.setAttribute("value", objArray[i].code);
+                optionElement.innerHTML = objArray[i].name;
+                selectElement.append(optionElement);
 
-                selectelement.append(optelement);
             }
 
-            document.body.append(selectelement);
+            document.body.append(selectElement);
 
 
         })

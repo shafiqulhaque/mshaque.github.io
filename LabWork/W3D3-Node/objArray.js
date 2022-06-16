@@ -61,7 +61,7 @@ func.findOldestPerson = function (arr) {
             oldestName = person.name;
         }
     }
-    return oldestAge;
+    return oldestName;
 };
 
 // 4. Get the Youngest person name
@@ -76,11 +76,11 @@ func.findYounger = function (arr) {
             youngestName = person.name;
         }
     }
-    return youngestName;
+    return youngestAge;
 };
 
 // 5. Find the person whose age is between 16 and 17 years
-// findYounger[{ name:’Ram’, age: 20 }, { name:’Lakshman’, age: 16 }]=> { name:’Lakshman’, age: 15 }
+// findYounger[{ name:’Ram’, age: 20 }, { name:’Lakshman’, age: 16 }]=> { name:’Lakshman’, age: 16 }
 
 func.findBetween = function (arr) {
     for (let person of arr) {

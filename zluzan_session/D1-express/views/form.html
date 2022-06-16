@@ -7,29 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="MD SHAFIQUL ISLAM">
     <title>Express Assignment</title>
-
 </head>
 
 <body>
 
-    <div id="myDIV" class="content">
+    <div id="myDIV" class="myClass" name="myName">
+        <div id="innerDIV">
 
-        <div class="col1">
-            <h2>Form to show on Label from cookies <i class="fas fa-cookie"></i></h2>
-        </div>
-        <div class="col2">
-            <h4>Welcome,
-                <%= username %>!
-            </h4>
-            <p>Click here Log-out <a style="display: inline-block;background-color: darkgoldenrod;" class="btn logout"
-                    href="/logout">Logout</a></p>
         </div>
     </div>
-
-    <div style="clear: both; float: left; width: 100%;">
-        <form id="myForm" action="cookie" method="post">
+    <div style="float:left; width:60%">
+        <h2>Form Controller</h2>
+    </div>
+    <!-- <div style="float:left; width:40%; text-align: right;">
+        <a style="display: inline-block;" class="btn" href="/pagestat">Hit Counter</a>
+    </div> -->
+    <div style="clear: both; float:left;width: 100%;">
+        <form id="myForm" action="/adding" method="post">
             <h4>Name : </h4>
-            <input type="text" id="textfield" name="textfield" value="Shafi" placeholder="Enter any text">
+            <input type="text" id="textfield" name="name" placeholder="Enter any text">
             <h4 class="degree">Degree:</h4>
             <input type="radio" name="degree" value="Graduate" id="radio1" class="radios">
             <label class="ival">Graduate</label>
@@ -50,7 +46,7 @@
                 <label class="ival">SA</label>
             </div>
             <h4>Select Box:</h4>
-            <select id="sellist" name="sellist">
+            <select id="sellist" name="optionlist">
                 <option value="Option1">Option 1</option>
                 <option value="Option2">Option 2</option>
                 <option value="Option3">Option 3</option>
@@ -58,7 +54,7 @@
             <h4>Your message:</h4>
             <textarea id="txtArea" name="txtArea" rows="5" cols="30"></textarea>
             <br>
-            <input id="savebutton" class="btn" type="submit" value="submit">
+            <input id="savebutton" class="btn" type="submit" value="Show user's input">
         </form>
     </div>
 

@@ -1,5 +1,5 @@
 // #1 Find array of Odd / Even / Numbers divisible by 4.
-//let numbers = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10];
+// let numbers = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10];
 
 const func = {};
 
@@ -39,7 +39,7 @@ func.arrOfDiv4 = function (myarr) {
 //arrOfDiv4(numbers);
 
 // #2 Caluculate Sum of all Odd / Even / Numbers divisible by 4.
-
+//even
 func.sum = function (myarr) {
     let s = 0;
     //let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -55,7 +55,6 @@ func.sum = function (myarr) {
 
 // #3 Find Unique Numbers in the Array.
 func.uniqueOfArray = function (myarr) {
-
     let uniqueArray = [];
 
     for (let item of myarr) {

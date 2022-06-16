@@ -1,98 +1,87 @@
-// Madam Last review
+// 1. Create and setup Express Server
+const express = require('express');
+const app = express();
 
-var express = require("express");
-var app = express();
-var ejs = require("ejs");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-//server
-app.listen(80, function () {
-    console.log("Hosting 80 port");
-})
-//read the parammeter from post req
-app.use(cookieParser);
+const path = require('path');  // file sending need path
+const bodyParser = require('body-parser');
 
-//middle ware : dont need to us ebody parser ather us this
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-//
-app.set('view engine', 'html');
-app.engine('htnl', ejs.renderFile);
+// Port
+const port = 333;
+app.listen(port, (error) => {
+    if (!(error)) {
+        console.log("Application is Running on : " + port);
+    } else
+        console.log("Application Can't run on : " + port);
+})
 
-app.get("/", funciton(req, res, next){
-    //madams reviewlecture praxtice
+// Route  - Get - localhost:3333
+app.get('/', function (req, res, next) {
+    res.send("Hello there to home Page");
+})
 
-});
+// 2. Show the Html developed in DOM Assignment when path is '/add'
+app.get('/adding', function (req, res, next) {
+    res.sendFile(path.join(__dirname, "./", "views", "form.html"));
+})
 
-// Exam: get post redirect sendFile use ejs cookies middleware object-handing json object manipulation
-// ajax by button
+// 3. Submit the data entered by the User to the same url.
 
-// render to send parameter
-// send file for plain html
-// send DataTransfer
-//receive Data
-// obj send in cokkies
-// use ??
-// send form
-//receive form submitted data
-//views count
+// a. Store all the User entered information locally(in the server page)
+//send html data
 
+let data = {};
 
-// review ajax file
+//b. Redirect the Post to new route, '/view' page.
 
+app.post('/adding', function (req, res, next) {
+    console.log(req.body);  //json ,,, data passing from form and post method
+    data = req.body;
+    //console.log(data);
+    res.redirect('/viewing');  //not req
+})
 
+// 4. View request should construct the html from the information stored by User and display the page.
 
+app.get('/viewing', function (req, res, next) {
+    let html = " ";
 
-// // 1. Create Express Server
-// const { json } = require('body-parser');
-// const { getEventListeners } = require('events');
-// const express = require('express');
-// //const ejs = require('ejs');
-// const app = express();
-// const port = 3001;
+    html += CreateSpan("Name : ", data.name);
+    html += CreateSpan("Degree : ", data.degree);
+    html += CreateSpan("Course : ", data.course);
+    html += CreateSpan("Option : ", data.optionlist);
+    html += CreateSpan("Message : ", data.txtArea);
 
-// app.listen(port, () => {
-//     console.log('Your Server is running on: ' + port);
-// })
+    res.send(html);
+})
 
-// app.get('/', (req, res, next) => {
-//     console.log('Here');
-//     res.render("index");
-// })
+function CreateSpan(label, data) {
+    return "<span>" + label + " " + data + "</span></br>"
+}
 
+// 5. Create an Error Page
+app.get("/error", function (req, res, next) {
+    res.send(error());
+})
 
-// // 2. Show the Html developed in DOM Assignment when path is '/add'
+// 5. Create 404 page, so whenever User types in the path that is not found, this 404 is shown.
+//300 //400 //500
+app.use(function (req, res, next) {
+    // status
+    res.status(404);
+    res.sendFile(path.join(__dirname, "./", "views", '404.html'));
+})
 
-
-
-// // 3. Submit the data entered by the User to the same url.
-// // a. Store all the User entered information locally(in the server page)
-// //b. Redirect the Post to new route, '/view' page.
-
-
-// // 4. View request should construct the html from the information stored by User and display the page.
-
-
-// // 5. Create 404 page, so whenever User types in the path that is not found, this 404 is shown.
-
-
-// // 5. Create an Error Page
-
+app.use(function (error, req, res, next) {
+    // status
+    res.status(500);
+    res.sendFile(path.join(__dirname, "./", "views", 'error.html'));
+})
 
 // // 6. Add a link to the DOM html to see the statistics of the site, (this is a separate get request), this page shows the number of hits per url.
 
-
-
-// // app.use(express.json());
-
-// // app.use(express.urlencoded({ extended: false }));
-
-
-// // app.use(function (req, res, next) {
-// //     console.log(req, query);
-// //     if (req.query == 5)
-// //         next();
-// //     else
-// //         res.send("Ano non exisiting route");
-// // })
+// let home = 0;
+// let add = 0;
+// let view = 0;

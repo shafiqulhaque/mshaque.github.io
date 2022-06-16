@@ -51,8 +51,6 @@ app.get('/view', (req, res, next) => {
     //     //res.redirect('/error')
     // }
 
-    let coursesArr = storedData.course;
-
     let chtml = '';
     //chtml = coursesArr.join(', ');
     // coursesArr.forEach(element => {
@@ -61,7 +59,7 @@ app.get('/view', (req, res, next) => {
     // });
     res.send("<div>User Input:" + storedData.textfield + "</div>"
         + "<div>Degree:" + storedData.degree + "</div>"
-        + "<div>Courses:" + coursesArr + "</div>"
+        + "<div>Courses:" + coursstoredData.courseesArr + "</div>"
         + "<div>Select Box:" + storedData.sellist + "</div>"
         + "<div>Message:" + storedData.txtArea + "</div>")
     //res.send("<label>Message:"+ storedData.txtArea+ "</label>")
